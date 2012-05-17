@@ -8,10 +8,16 @@ gem 'rails', '3.2.3'
 gem 'mysql2'
 
 
+group :development do
+  
+
+  gem 'rspec-rails', '2.9.0'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -25,6 +31,14 @@ gem 'jquery-rails'
 gem 'execjs'
 
 gem 'therubyracer'
+
+group :test do
+  gem 'capybara', '1.1.2'
+end
+
+group :production do
+ 
+end
 
 
 # To use ActiveModel has_secure_password
