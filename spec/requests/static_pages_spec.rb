@@ -8,6 +8,12 @@ describe "Static pages" do
       visit '/static_pages/home'
       page.should have_content('CompareMe')
     end
+      
+    it "should have the right title" do
+      visit '/static_pages/home'
+      page.should have_selector('title',
+     :text => "Compare Me Application | Home")
+    end
   end
   
   
@@ -17,6 +23,12 @@ describe "Static pages" do
       visit '/static_pages/help'
       page.should have_content('Help')
     end
+    
+    it "should have the right title" do
+      visit '/static_pages/help'
+      page.should have_selector('title',
+     :text => "Compare Me Application | Help")
+    end
   end
   
   describe "About page" do
@@ -24,6 +36,12 @@ describe "Static pages" do
     it "should have the content 'About Us'" do
       visit '/static_pages/about'
       page.should have_content('About Us')
+    end
+    
+     it "should have the right title" do
+      visit '/static_pages/about'
+      page.should have_selector('title',
+     :text => "Compare Me Application | About Us")
     end
   end
 end
